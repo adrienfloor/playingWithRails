@@ -1,0 +1,11 @@
+<% @pizzas.each do |pizza| %>
+  <h3> <%= pizza.name %> </h3>
+  <p> <%= pizza.description %> </p>
+  <p>
+    <a href="<%= pizza_path(pizza.id) %>" class="btn btn-primary">See</a>
+    <a href="<%= edit_pizza_path(pizza.id) %>" class="btn btn-primary">Edit</a>
+    <a href="<%= pizza_path(pizza.id) %>" class="btn btn-danger" data-confirm="sure?" data-method="delete">Delete</a>
+  </p>
+<% end %>
+
+<p><a href="<%= new_pizza_path %>" class="btn btn-success">Create your own pizza</a></p>

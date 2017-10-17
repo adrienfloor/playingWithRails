@@ -1,0 +1,17 @@
+<h3> <%= post.name %> </h3>
+<p> <%= post.content %> </p>
+<%if post.category %>
+<p> <%= post.category.name %></p>
+<% end %>
+<p>
+  Tags:
+    <% post.tags.each do |tag| %>
+    <%=tag.name %>
+      <% end %>
+</p>
+<%= link_to('See the post', post, class:'btn btn-primary') %>
+<%= link_to('Edit the post', [:edit, post], class:'btn btn-success') %>
+<%= link_to('Delete the post', post, class:'btn btn-danger', data:{confirm:'Are you sure?', method: :delete}) %>
+
+
+</p>

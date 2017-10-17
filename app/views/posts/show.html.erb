@@ -1,0 +1,14 @@
+<% content_for(:title, @post.name) %>
+
+<% content_for :content do %>
+
+<h3><%= @post.name %></h3>
+<p><%= @post.content %></p>
+<p>
+  <a href="<%= edit_post_path(@post) %>" class="btn btn-success">Edit the post</a>
+  <a href="<%= posts_path %>" class="btn btn-primary">Back to posts</a>
+</p>
+
+<% end %>
+
+<%= render template: 'layouts/sidebar' %>

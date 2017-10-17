@@ -1,0 +1,13 @@
+<h3>Create your pizza</h3>
+
+<%= form_for @pizza do |f| %>
+<div class="form-group">
+<%= f.text_area :name, class:'form-control', placeholder:'Name' %>
+</div>
+<div class="form-group">
+<%= f.text_area :description, class:'form-control', placeholder:'Description' %>
+</div>
+<div class="form-group">
+<button type="submit" class='btn btn-primary'>Save</button>
+</div>
+<% end %>
